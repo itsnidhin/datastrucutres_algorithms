@@ -24,11 +24,28 @@ public class SelectionSort {
         intArray[4] = 55;
         intArray[5] = 1;
         intArray[6] = -22;
-
+        int largestIndex = 0;
+        for(int lastunsortedIndex = intArray.length-1;lastunsortedIndex>0; lastunsortedIndex--){
+            largestIndex = 0;
+            for(int i = 1; i<=lastunsortedIndex;i++){
+                if(intArray[i] > intArray[largestIndex]){
+                    largestIndex = i;
+                }
+            }
+            swap(intArray, largestIndex, lastunsortedIndex);
+        }
         
         
 
-        for(int lastUnsrtedIndex = intArray.length-1;lastUnsrtedIndex>0;lastUnsrtedIndex--){
+
+
+
+
+
+
+
+
+        /*for(int lastUnsrtedIndex = intArray.length-1;lastUnsrtedIndex>0;lastUnsrtedIndex--){
             int largestIndex = 0;
             for(int i =1;i<=lastUnsrtedIndex;i++){
                 if(intArray[i] > intArray[largestIndex]){
@@ -39,7 +56,7 @@ public class SelectionSort {
             swap(intArray, lastUnsrtedIndex, largestIndex);
 
 
-        }
+        }*/
 
 
 
